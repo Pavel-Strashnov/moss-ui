@@ -1,5 +1,5 @@
 const path = require('path');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './lib/index.ts',
@@ -15,7 +15,7 @@ module.exports = {
     libraryTarget: 'umd',
   },
   target: 'web',
-//   plugins: [new CleanWebpackPlugin()],
+  plugins: [new CleanWebpackPlugin()],
   module: {
     rules: [
       {

@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
