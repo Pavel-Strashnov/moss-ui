@@ -1,6 +1,6 @@
 import React  from "react";
-// import './styles.sass';
+import './styles.sass';
 
 export const Button = (props: React.PropsWithChildren<{}>) => {
-    return <input type='button'>{props.children}</input>
+    return <button type='button'>{props.children}</button>
 }
