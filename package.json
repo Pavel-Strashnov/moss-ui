@@ -11,6 +11,7 @@
         "react-dom": "^18.2.0"
     },
     "scripts": {
-        "docs": "yarn workspace @moss-ui/docs start"
+        "docs": "yarn workspace @moss-ui/docs start",
+        "build": "yarn workspace @moss-ui/components build"
     }
 }
