@@ -2,7 +2,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './lib/index.ts',
+  entry: './src/lib/index.ts',
   devtool: 'inline-source-map',
   externals: [
     'react',
@@ -11,7 +11,7 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    library: '@getmoss/moss-ui',
+    library: '@psa-test-org/moss-ui',
     libraryTarget: 'umd',
   },
   target: 'web',
