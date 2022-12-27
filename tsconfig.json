@@ -23,6 +23,6 @@
     "outDir": "dist"
   },
   "include": [
-    "src/lib"
+    "src"
   ]
 }

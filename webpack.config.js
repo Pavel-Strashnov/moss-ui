@@ -2,7 +2,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/lib/index.ts',
+  entry: './src/index.ts',
   devtool: 'inline-source-map',
   externals: [
     'react',
