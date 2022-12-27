@@ -1,17 +1,16 @@
+import React from 'react';
+import { Button } from '@moss-ui/components'
 import logo from './logo.svg';
 import './App.css';
-import { Button } from '@moss-ui/components'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-
-        <Button>Hello, components!</Button>
-
+        <Button>Hello components</Button>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
           className="App-link"
