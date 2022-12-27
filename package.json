@@ -1,0 +1,8 @@
+{
+    "name": "@moss-ui/monorepo",
+    "private": true,
+    "workspaces": [
+        "components",
+        "example-app"
+    ]
+}

@@ -1,5 +1,5 @@
 {
-  "name": "@psa-test-org/moss-ui",
+  "name": "@moss-ui/components",
   "version": "0.3.2",
   "license": "MIT",
   "main": "dist/index.js",
