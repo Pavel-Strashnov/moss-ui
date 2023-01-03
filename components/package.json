@@ -13,6 +13,7 @@
   "dependencies": {},
   "scripts": {
     "build": "webpack --mode production",
+    "start": "webpack watch",
     "test": "react-scripts test"
   },
   "eslintConfig": {

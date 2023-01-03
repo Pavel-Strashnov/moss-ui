@@ -11,7 +11,11 @@
         "react-dom": "^18.2.0"
     },
     "scripts": {
-        "docs": "yarn workspace @moss-ui/docs start",
-        "build": "yarn workspace @moss-ui/components build"
+        "start": "concurrently yarn:components:start yarn:docs:start",
+        "docs:start": "yarn workspace @moss-ui/docs start",
+        "components:start": "yarn workspace @moss-ui/components start"
+    },
+    "devDependencies": {
+        "concurrently": "^7.6.0"
     }
 }
