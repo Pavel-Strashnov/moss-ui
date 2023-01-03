@@ -3,6 +3,7 @@
     "private": true,
     "workspaces": [
         "components",
+        "example-app",
         "docs"
     ],
     "resolutions": {
@@ -10,12 +11,7 @@
         "react-dom": "^18.2.0"
     },
     "scripts": {
-        "build": "lerna run build",
-        "build:components": "yarn workspace @moss-ui/components build",
-        "test": "lerna run test",
-        "docs": "yarn workspace @moss-ui/docs start"
-    },
-    "devDependencies": {
-        "lerna": "^6.3.0"
+        "docs": "yarn workspace @moss-ui/docs start",
+        "build": "yarn workspace @moss-ui/components build"
     }
 }
