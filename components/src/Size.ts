@@ -9,3 +9,5 @@ export const size = {
 } as const
 
 export type Size = keyof typeof size
+
+export type MarginSize = Size | 'auto'
