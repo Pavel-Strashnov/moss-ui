@@ -1,3 +1,5 @@
+import {css} from 'styled-components'
+
 export const size = {
     '0': '0',
     '6': '6px',
@@ -11,3 +13,18 @@ export const size = {
 export type Size = keyof typeof size
 
 export type MarginSize = Size | 'auto'
+
+const getMarginSize = (marginSize?: MarginSize) => {
+    switch (marginSize) {
+        case 'auto':
+        case undefined:
+            return marginSize
+        default:
+            return size[marginSize]
+    }
+}
+
+export const mixinMargin = (props: {mt?: MarginSize, mb?: MarginSize}) => css`
+    margin-top: ${getMarginSize(props.mt)};
+    margin-bottom: ${getMarginSize(props.mb)};
+`

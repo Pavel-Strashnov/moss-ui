@@ -1,31 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import { MarginSize, size, Size } from '../Size'
+import { mixinMargin, MarginSize, size, Size } from '../Size'
 
 export type StackProps = React.PropsWithChildren<{
     direction?: 'column' | 'row'
     gap?: Size
     mt?: MarginSize
+    mb?: MarginSize
 }>
 
-const getMarginSize = (marginSize?: MarginSize) => {
-    switch (marginSize) {
-        case 'auto':
-        case undefined:
-            return marginSize
-        default:
-            return size[marginSize]
-    }
-}
-
-const StyledDiv = styled.div<StackProps>`
+const StyledFlex = styled.div<StackProps>`
     display: flex;
     flex-direction: ${props => props.direction};
     gap: ${props => props.gap && size[props.gap]};
     align-items: flex-start;
-    margin-top: ${props => getMarginSize(props.mt)};
-    
+    ${props => mixinMargin(props)}
 `
 
-export const Stack = ({ direction = 'column', gap, mt, children }: StackProps) => 
-    <StyledDiv direction={direction} gap={gap} mt={mt}>{children}</StyledDiv>
+export const Stack = ({ direction = 'column', gap, mt, mb, children }: StackProps) => 
+    <StyledFlex direction={direction} gap={gap} mt={mt} mb={mb}>{children}</StyledFlex>

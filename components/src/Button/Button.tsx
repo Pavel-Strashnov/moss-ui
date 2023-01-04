@@ -56,7 +56,6 @@ const StyledButton = styled(ButtonUnstyled)<{
     size: ButtonSize
     variant: ButtonVariant
 }>`
-
     border: 0;
     border-radius: ${size[8]};
     cursor: pointer;
