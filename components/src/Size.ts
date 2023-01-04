@@ -14,6 +14,16 @@ export type Size = keyof typeof size
 
 export type MarginSize = Size | 'auto'
 
+export type MarginProps = { 
+    mt?: MarginSize
+    mb?: MarginSize
+    ml?: MarginSize
+    mr?: MarginSize
+    mv?: MarginSize
+    mh?: MarginSize
+    m?: MarginSize
+}
+
 const getMarginSize = (marginSize?: MarginSize) => {
     switch (marginSize) {
         case 'auto':
@@ -24,7 +34,9 @@ const getMarginSize = (marginSize?: MarginSize) => {
     }
 }
 
-export const mixinMargin = (props: {mt?: MarginSize, mb?: MarginSize}) => css`
-    margin-top: ${getMarginSize(props.mt)};
-    margin-bottom: ${getMarginSize(props.mb)};
+export const mixinMargin = (props: MarginProps) => css`
+    margin-top: ${getMarginSize(props.mt) || getMarginSize(props.mv) || getMarginSize(props.m)}};
+    margin-bottom: ${getMarginSize(props.mb) || getMarginSize(props.mv) || getMarginSize(props.m)}};
+    margin-left: ${getMarginSize(props.ml) || getMarginSize(props.mh) || getMarginSize(props.m)}};
+    margin-right: ${getMarginSize(props.mr) || getMarginSize(props.mh) || getMarginSize(props.m)}};
 `

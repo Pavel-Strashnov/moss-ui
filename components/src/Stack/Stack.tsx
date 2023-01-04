@@ -17,5 +17,5 @@ const StyledFlex = styled.div<StackProps>`
     ${props => mixinMargin(props)}
 `
 
-export const Stack = ({ direction = 'column', gap, mt, mb, children }: StackProps) => 
-    <StyledFlex direction={direction} gap={gap} mt={mt} mb={mb}>{children}</StyledFlex>
+export const Stack = ({ direction = 'column', gap, ...rest }: StackProps) => 
+    <StyledFlex direction={direction} gap={gap} {...rest} />
