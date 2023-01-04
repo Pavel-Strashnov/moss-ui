@@ -4,22 +4,22 @@ import styled from 'styled-components'
 import { css } from 'styled-components'
 
 import { Color } from '../Color'
-import { Size } from "../Size";
+import { size } from "../Size";
 import { bodyLBold, bodyM, bodyMBold } from "../Typography/mixins";
 
 const sizeRules: Record<ButtonSize, ReturnType<typeof css>> = {
     'small': css`
-        padding: ${Size[6]} ${Size[12]};
+        padding: ${size[6]} ${size[12]};
         ${bodyMBold}
     `,
 
     'medium': css`
-        padding: ${Size[10]} ${Size[16]};
+        padding: ${size[10]} ${size[16]};
         ${bodyMBold}
     `,
 
     'large': css`
-        padding: ${Size[12]} ${Size[24]};
+        padding: ${size[12]} ${size[24]};
         ${bodyLBold}
     `,
 }
@@ -58,7 +58,7 @@ const StyledButton = styled(ButtonUnstyled)<{
 }>`
 
     border: 0;
-    border-radius: ${Size[8]};
+    border-radius: ${size[8]};
     cursor: pointer;
     ${props => sizeRules[props.size]}
     ${props => variantRules[props.variant]}

@@ -1,4 +1,4 @@
-export const Size = {
+export const size = {
     '0': '0',
     '6': '6px',
     '8': '8px',
@@ -6,4 +6,6 @@ export const Size = {
     '12': '12px',
     '16': '16px',
     '24': '24px',
-}
+} as const
+
+export type Size = keyof typeof size
