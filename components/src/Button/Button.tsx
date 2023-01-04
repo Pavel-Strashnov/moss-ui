@@ -5,16 +5,23 @@ import { css } from 'styled-components'
 
 import { Color } from '../Color'
 import { Size } from "../Size";
+import { bodyLBold, bodyM, bodyMBold } from "../Typography/mixins";
 
 const sizeRules: Record<ButtonSize, ReturnType<typeof css>> = {
     'small': css`
-        padding: ${Size[6]} ${Size[12]};`,
+        padding: ${Size[6]} ${Size[12]};
+        ${bodyMBold}
+    `,
 
     'medium': css`
-        padding: ${Size[10]} ${Size[16]};`,
+        padding: ${Size[10]} ${Size[16]};
+        ${bodyMBold}
+    `,
 
     'large': css`
-        padding: ${Size[12]} ${Size[24]};`,
+        padding: ${Size[12]} ${Size[24]};
+        ${bodyLBold}
+    `,
 }
 
 const variantRules: Record<ButtonVariant, ReturnType<typeof css>> = {
@@ -49,16 +56,9 @@ const StyledButton = styled(ButtonUnstyled)<{
     size: ButtonSize
     variant: ButtonVariant
 }>`
-    @font-face {
-        font-family: 'aeonik_pro';
-        src: url(https://assets.website-files.com/5fbe6e809f20545622827be2/5fbe6e809f2054cb05827c0f_AeonikPro-Medium.woff);
-        font-weight: 400;
-        font-style: normal;
-    }
 
     border: 0;
     border-radius: ${Size[8]};
-    font-family: 'aeonik_pro';
     cursor: pointer;
     ${props => sizeRules[props.size]}
     ${props => variantRules[props.variant]}
