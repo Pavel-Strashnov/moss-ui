@@ -3,7 +3,6 @@
     "private": true,
     "workspaces": [
         "components",
-        "example-app",
         "docs"
     ],
     "resolutions": {
@@ -13,7 +12,8 @@
     "scripts": {
         "start": "concurrently yarn:components:start yarn:docs:start",
         "docs:start": "yarn workspace @moss-ui/docs start",
-        "components:start": "yarn workspace @moss-ui/components start"
+        "components:start": "yarn workspace @moss-ui/components start",
+        "components:build": "yarn workspace @moss-ui/components build"
     },
     "devDependencies": {
         "concurrently": "^7.6.0"
