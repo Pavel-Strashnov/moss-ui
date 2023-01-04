@@ -24,9 +24,21 @@ const StyledButton = styled(ButtonUnstyled)<{
     background-color: ${Color["ui-moss-700"]};
     color: ${Color.white};
     padding: ${props => padding[props.size]};
-    border: ${props => props.size};
+    border: 0;
     border-radius: ${Size[8]};
     font-family: 'aeonik_pro';
+
+    &:hover {
+        background-color: ${Color["ui-moss-800"]};
+    }
+
+    &.${buttonUnstyledClasses.active} {
+        background-color: ${Color["ui-moss-900"]};
+    }
+
+    &.${buttonUnstyledClasses.focusVisible} {
+        outline: 4px solid ${Color["gray-150"]};
+    }
 `
 type ButtonSize = 'small' | 'medium' | 'large'
 
