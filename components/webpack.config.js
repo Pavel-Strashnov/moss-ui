@@ -23,15 +23,6 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.sass$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-        // include: path.resolve(__dirname, './src'),
-      },
     ],
   },
   resolve: {
